@@ -1,0 +1,89 @@
+{
+  "expo": {
+    "name": "RevoPass",
+    "slug": "revopass",
+    "scheme": "revopass",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "primaryColor": "#0F4D3D",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "ng.revospace.revopass",
+      "buildNumber": "1",
+      "infoPlist": {
+        "CFBundleDisplayName": "RevoPass",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "ng.revospace.revopass",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#011C13",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ],
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#17261F"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "RevoPass needs access to your photos so you can attach a picture of a receipt to an expense.",
+          "cameraPermission": "RevoPass uses the camera to scan barcodes, serial numbers and IMEI labels, and to photograph receipts.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "RevoPass uses Face ID to unlock your invoices and books on this phone."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "RevoPass uses the camera to scan barcodes, serial numbers and IMEI labels, and to photograph receipts.",
+          "recordAudioAndroid": false,
+          "microphonePermission": false
+        }
+      ],
+      "@react-native-community/datetimepicker"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "4e83fb06-72d5-4b4f-a20e-5bece626aa35"
+      }
+    },
+    "owner": "airogrima",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/4e83fb06-72d5-4b4f-a20e-5bece626aa35"
+    }
+  }
+}

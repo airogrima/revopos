@@ -1,0 +1,15 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    /*
+     * packages/core is raw TypeScript with explicit .ts specifiers, which is
+     * what the web app and Node's own resolver want. Metro's babel transform
+     * strips the extension happily; only tsc needs telling that this is
+     * deliberate. Nothing is emitted from here — Metro does the compiling — so
+     * allowing it costs nothing.
+     */
+    "allowImportingTsExtensions": true,
+    "noEmit": true
+  }
+}
